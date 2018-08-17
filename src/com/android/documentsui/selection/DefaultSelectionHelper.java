@@ -260,7 +260,10 @@ public final class DefaultSelectionHelper extends SelectionHelper {
 
     @Override
     public void extendRange(int pos) {
-        extendRange(pos, RANGE_REGULAR);
+        try {
+            extendRange(pos, RANGE_REGULAR);
+        }catch(Exception e){
+        }
     }
 
     @Override
